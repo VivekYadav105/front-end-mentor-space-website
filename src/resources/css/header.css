@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+:root{
+    font-size: 15px;
+}
+
+nav section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 2.7px;
+}
+
+.hamburger,.close{
+    display: none;
+}
+.logo-container{
+    padding: 2rem;
+}
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    margin: 2rem 0rem;
+    padding:0 5rem;
+    transition: 0.5s;
+    background-color: rgba( 255, 255, 255, 0.1 );
+    backdrop-filter: blur(10px);
+}
+nav ul li{
+    list-style-type: none;
+    margin: 0rem 2rem;
+    transition-delay: 0.5s;
+    transition: 0.5s;
+    padding: 1.5rem 0rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+nav li span{
+    font-weight: 600;
+    margin-right: .5rem;
+    letter-spacing: normal;
+}
+
+@media screen and (max-width:1000px) and (min-width:850px) {
+    nav ul{
+        padding: 0 2rem;
+    }
+  nav ul li{
+    margin: 0rem 1rem;
+  }
+}
+
+@media screen and (max-width:850px) {
+    nav section{
+        flex-direction: column;
+        position: relative;
+    }
+    .logo-container{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        padding:2rem;
+        align-items: center;
+    }
+    .hamburger,.close{
+        display: inline-block;
+    }
+    nav ul{
+        position: absolute;
+        right: 1rem;
+        top:2.5rem;
+        padding: 2.5rem;
+    }
+    nav ul.inactive{
+        height: 0;
+        width: 0;
+        overflow: hidden;
+        padding: 0px;
+    }
+    nav ul.active{
+        height: 80vh;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        max-width: 80vw;
+    }
+    nav ul a{
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+}

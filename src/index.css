@@ -1,13 +1,238 @@
-body {
+/*section-caption --for the sub heading*/
+/*section-heading --for the main heading*/
+/*main -- wrapper for the layout*/
+/*left --leftside container*/
+/*right --rightside container*/
+/*button main --white button*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+*{
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  text-decoration: none;
+  list-style-type: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.page{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: white; 
+}
+.left,.right{
+  flex-basis: 50%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+p{
+  font-size: 18px;
+  line-height: 1.75;
+  font-family: 'Barlow', sans-serif;
+  color: #d0d6f9;
+  width: 90%;
+  margin-right: auto;
+}
+
+.heading-1{
+  font-family: 'Bellefair', serif;
+  font-size: 150px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: white;
+  display: block;
+}
+.heading-2{
+  font-family: 'Bellefair', serif;
+  font-size: 100px;
+  text-transform: uppercase;
+}
+.heading-3{
+  font-family: 'Bellefair', serif;
+  font-size: 56px;
+  text-transform: uppercase;
+}
+.heading-4{
+  font-family: 'Bellefair', serif;
+  font-size: 32px;
+  color: gray;
+  text-transform: uppercase;
+}
+.heading-5{
+  font-family: 'Barlow Condensed';
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #d0d6f9;
+  line-height: 34px;
+  letter-spacing: 4.725px;
+}
+.subheading-1{
+  font-family: 'Bellefair', serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+.subheading-2{
+  font-family: 'Bellefair', serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #D0D6F9;
+  letter-spacing: 2.3625px;
+  line-height: 1.25;
+}
+.imageWrapper{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.imageWrapper img{
+  margin: auto;
+  width: 100%;
+  max-width: 500px;
+}
+
+.section-heading-wrapper{
+  padding: 0 2.25rem;
+}
+
+.section-caption{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;  
+  font-family: 'Barlow Condensed';
+  font-weight: 400;
+  padding: 1rem;
+  letter-spacing: 4.725px;
+  font-size: 1.25rem;
+  font-size: 24px;
+  margin: 1rem;
+  text-align: start;
+}
+
+.section-caption span{
+  color: gray;
+  font-weight:700;
+  margin: 0 1rem;
+  font-family: inherit;
+}
+
+.section-caption-wrapper{
+  align-self: flex-start;
+  padding: 0rem 2.5rem;
+}
+
+.ul-row{
+  display: flex;
+  margin: 1rem 0;
+}
+.ul-row li{
+  cursor: pointer;
+}
+.active-link{
+  border-bottom: 2px solid white;
+}
+.button-main{
+  border-radius: 50%;
+  font-size: 2.5rem;
+  border: 2px solid white;
+  letter-spacing: 2px;
+  font-family: 'Bellefair', serif;
+  color: #0B0D17;
+  width: 300px;
+  transition: 0.4s;
+  height: 300px;
+  text-transform: uppercase;
+}
+
+.button-main-transparent{
+  color:white;
+  background-color: #0B0D17;
+  border: 2px solid white;
+  letter-spacing: 2px;
+  font-family: 'Bellefair', serif;
+  transition: 0.4s;
+  text-transform: uppercase;
+  width: 75px;
+  height: 75px;
+  font-size: 32px;
+  border-radius: 50%;
+}
+.button-main-transparent.active{
+  background-color: white;
+  color: #0B0D17;
+}
+
+.button-main-transparent:hover{
+  box-shadow: 0px 0px 4px 20px rgba(255,255,255,0.34);
+}
+
+.button-main:hover{
+  box-shadow: 0px 0px 4px 75px rgba(255,255,255,0.34);
+  text-shadow: 0px 2px 13px rgba(150, 150, 150, 1);
+}
+.button-main:active{
+  background-color: rgba(228, 215, 215, 0.5);
+}
+@media screen and (max-width:1000px) {
+  .button-main{
+    width: 250px;
+    height: 250px;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width:850px){
+  .main{
+    flex-direction: column;
+    height: fit-content;
+  }
+  .main>div{
+    margin-top: 3rem;
+  }
+  .button-main{
+    font-size: 2.5rem;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 3rem;
+  }
+  .heading-1{
+    font-size: 20vw;
+  }
+  p{
+    margin-right: 0;
+    margin: 0 auto !important;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .imageWrapper img{
+    margin: auto;
+    width: 100%;
+    max-width: 300px;
+  }
+  .heading-1{
+    font-size: 75px;
+  }
+  .heading-2{
+    font-size: 60px;
+  }
+  .heading-3{
+    text-align: center;
+  }
+  .section-caption{
+    text-align: center;
+  }
 }

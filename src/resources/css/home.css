@@ -1,0 +1,25 @@
+.text{
+    width: 90%;
+    padding: 0rem 3rem;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width:850px) {
+    .text{
+    text-align: center;
+    width:100%;
+    padding: 0 2.25rem;
+    margin: 2rem 0;
+    }
+    #home-section .button-main{
+      margin: 3rem 0;
+    }
+  }
+
+  @media screen and (max-width:350px) {
+    #home-section .button-main{
+      width: 200px;
+      height: 200px;
+      font-size: 2rem;
+    }
+  }
