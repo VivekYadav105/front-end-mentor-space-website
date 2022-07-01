@@ -8,6 +8,8 @@ const firebaseConfig = {
   storageBucket:process.env.REACT_APP_FIREBASE_STORAGE
 };
 
+console.log(REACT_APP_FIREBASE_KEY)
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const fireStore = getFirestore(app);
