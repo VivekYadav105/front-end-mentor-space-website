@@ -5,8 +5,6 @@ import { useEffect, useState } from "react";
 import { VerticalTabs } from "./tabComponent";
 import { getDocs, collection } from "firebase/firestore";
 import { fireStore as db, storage } from "../firebaseConfig";
-import rockimg from "../resources/images/technology/image-launch-vehicle-landscape.jpg";
-import { getDownloadURL, ref } from "firebase/storage";
 
 function Technology(props) {
   const [tech, setTech] = useState();

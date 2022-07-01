@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+    "env-cmd": "^10.1.0",
     "firebase": "^9.8.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -14,7 +15,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "env-cmd -e production react-scripts start",
+    "start-dev":"env-cmd -e development react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

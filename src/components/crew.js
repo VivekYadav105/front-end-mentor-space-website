@@ -10,9 +10,6 @@ import { getDownloadURL, ref } from "firebase/storage";
 function Crew(props) {
   const [crew, setCrew] = useState({});
 
-  const storageref = ref(storage, "crew/image-mark-shuttleworth.png");
-  console.log(getDownloadURL(storageref));
-
   useEffect(() => {
     props.changeBg(bg);
   }, []);
