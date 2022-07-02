@@ -34,13 +34,15 @@
 }
 
 #crewImgWrapper img {
-  width: 600px;
+  width: 550px;
   margin: auto;
   height: 100%;
 }
 
 #crew-section .slide-buttons {
   align-self: center;
+  display: flex;
+  justify-content: center;
   order: 1;
 }
 

@@ -1,6 +1,6 @@
 import "../resources/css/header.css";
 import {Link, useLocation, useNavigate } from "react-router-dom";
-import logo from "../resources/logo.svg";
+
 import hamburger from "../resources/icon-hamburger.svg";
 import close from "../resources/icon-close.svg";
 import { useEffect, useState } from "react";
@@ -46,7 +46,7 @@ function Header(props) {
       <nav id="nav-bar">
         <section id="nav-container">
           <div className="logo-container">
-            <img src={logo} alt="logo" className="logo" />
+            <img src="images/logo.svg" alt="logo" className="logo" />
             {menuIcon}
           </div>
           <ul className={menuStatus == "open" ? "active" : "inactive"}>

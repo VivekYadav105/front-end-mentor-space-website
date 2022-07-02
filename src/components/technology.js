@@ -1,16 +1,20 @@
 import "../resources/css/technology.css";
 import Caption from "./caption";
-import bg from "../resources/images/background/background-technology-desktop.jpg";
 import { useEffect, useState } from "react";
 import { VerticalTabs } from "./tabComponent";
 import { getDocs, collection } from "firebase/firestore";
 import { fireStore as db, storage } from "../firebaseConfig";
+import CircleLoader from 'react-spinners/'
 
 function Technology(props) {
   const [tech, setTech] = useState();
 
   useEffect(() => {
-    props.changeBg(bg);
+    if (window.innerWidth > 850) {
+      props.changeBg("images/background/background-technology-desktop.jpg");
+    } else {
+      props.changeBg("images/background/background-technology-tablet.jpg");
+    }
   });
 
   async function loadData(i) {
@@ -25,7 +29,6 @@ function Technology(props) {
       console.log(err);
     }
   }
-  console.log(tech);
 
   return (
     <section className="page" id="tech-section">

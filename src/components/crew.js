@@ -1,7 +1,6 @@
 import "../resources/css/crew.css";
 import { fireStore as db, storage } from "../firebaseConfig";
 import { collection, getDocs, addDoc } from "firebase/firestore";
-import bg from "../resources/images/background/background-crew-desktop.jpg";
 import { Tabs } from "./tabComponent";
 import { useEffect, useState } from "react";
 import Caption from "./caption";
@@ -11,7 +10,11 @@ function Crew(props) {
   const [crew, setCrew] = useState({});
 
   useEffect(() => {
-    props.changeBg(bg);
+    if (window.innerWidth > 850) {
+      props.changeBg("images/background/background-crew-desktop.jpg");
+    } else {
+      props.changeBg("images/background/background-crew-tablet.jpg");
+    }
   }, []);
 
   async function loadData(i) {

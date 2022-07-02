@@ -1,16 +1,19 @@
 import { fireStore as db } from "../firebaseConfig";
 import { collection, getDocs, addDoc } from "firebase/firestore";
-import bg from "../resources/images/background/background-destination-desktop.jpg";
 import { PlanetTabs, PlanetImage } from "./planet";
 import "../resources/css/destination.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState,Laz } from "react";
 
 const Destination = (props) => {
   const [planet, setPlanet] = useState("");
 
   useEffect(() => {
-    props.changeBg(bg);
-  });
+    if (window.innerWidth > 850) {
+      props.changeBg("images/background/background-destination-desktop.jpg");
+    } else {
+      props.changeBg("images/background/background-destination-tablet.jpg");
+    }
+  }, []);
 
   async function loadData(i) {
     setPlanet("");

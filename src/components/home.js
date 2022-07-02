@@ -1,16 +1,11 @@
-import Header from "./header";
 import "../resources/css/home.css";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Home(props) {
   useEffect(() => {
-    if(window.width>850){
-      props.changeBg('https://firebasestorage.googleapis.com/v0/b/full-website-b641c.appspot.com/o/backgrounds%2Fbackground-home-tablet.jpg?alt=media&token=2ff5532d-ef08-4641-b666-356f2a13a8b5')
-    }
-    else{
-      props.changeBg('https://firebasestorage.googleapis.com/v0/b/full-website-b641c.appspot.com/o/backgrounds%2Fbackground-home-desktop.jpg?alt=media&token=15f05863-bfe6-4ee5-984f-bdeb48faffd6');
-    }
+    if(window.innerWidth>850){props.changeBg('images/background/background-home-desktop.jpg')}
+    else{props.changeBg('images/background/background-home-tablet.jpg')}
   },[]);
 
   return (
