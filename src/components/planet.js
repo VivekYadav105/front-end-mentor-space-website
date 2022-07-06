@@ -8,7 +8,6 @@ export function PlanetTabs(props) {
   const [activeTab, setActiveTab] = useState("Moon");
 
 
-  console.log(process.env)
 
   useEffect(() => {
     props.loadData(activeTab);
